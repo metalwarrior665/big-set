@@ -1,0 +1,16 @@
+{
+  "name": "big-set",
+  "version": "1.0.0",
+  "description": "Workaround Set for sets larger than 14M elements",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "set",
+    "no limit"
+  ],
+  "author": "Lukas Krivka",
+  "license": "ISC",
+  "dependencies": {}
+}
