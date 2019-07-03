@@ -12,5 +12,9 @@
   ],
   "author": "Lukas Krivka",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/metalwarrior665/big-set.git"
+  }
 }
