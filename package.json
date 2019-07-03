@@ -1,6 +1,6 @@
 {
   "name": "big-set",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Workaround Set for sets larger than 14M elements",
   "main": "main.js",
   "scripts": {

@@ -1,6 +1,6 @@
 ## big-set
 
-Simple and uncomplete wrapper of [native javascript Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It bypasses V8 max limit of approx. 14M elements. It does so by creating multiple sets and wrapping them to similar API.
+Simple and uncomplete wrapper of [native javascript Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It bypasses V8 max limit of approx. 14M elements. It does so by creating multiple sets and wrapping them to similar API. If you need key, value pairs rather than just keys, you can use [`big-map-simple`](https://www.npmjs.com/package/big-map-simple) which is just about 10-20% slower.
 
 Has no dependencies. Just few lines of code.
 
@@ -39,8 +39,10 @@ const insert = (set, multiplicator) => {
     } 
     const end = Date.now();
     console.log(`Final size of set: ${set.size}, took ${end - start} ms to create`);
+    const keysStart = Date.now();
     const keys = set.keys();
-    console.log('keys length:', keys.length)
+    const keysEnd = Date.now();
+    console.log(`Final length of key: ${keys.length}, took ${keysEnd - keysStart} ms to create`);
 }
 
 const set = new BigSet();
@@ -71,4 +73,5 @@ for (const testN of testingRandomNumbers) {
 const end = Date.now();
 console.dir(results)
 console.log(`Check took ${end - start} ms`)
+
 ```
